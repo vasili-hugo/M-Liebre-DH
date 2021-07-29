@@ -259,6 +259,10 @@ footer i {
     margin-bottom: 10px;
 }
 
+footer i:hover{
+    color:red;
+}
+
 /* MEDIA QUERIES ------------------------------------------------------------------*/
 
 /* tablet */

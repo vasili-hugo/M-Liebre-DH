@@ -25,10 +25,9 @@ app.get('*', function (request, response){
 })
 
 
-app.listen(port, ()=>{
-    console.log('Express running en puerto 3000')
+app.listen(process.env.PORT || port, ()=>{
+    console.log('Express running en puerto: ' + port)
 });
-//const publicPath = path.join(__dirname,'/public');
 
 
 

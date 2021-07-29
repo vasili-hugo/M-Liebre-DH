@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <script src="https://kit.fontawesome.com/ce6fc57481.js" crossorigin="anonymous"></script> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Registrate</title>
+</head>
+
+<body id="registro-usuario">
+    <form id="register" action="/home" method="get">
+
+        <span class="datos"><input type="text" name="name" id="name" minlength="4" required placeholder="Nombre"><i
+                class="fas fa-check"></i></span>
+
+        <span class="datos"><input type="text" name="apellido" id="apellido" minlength="4" required placeholder="Apellido"><i
+                class="fas fa-check"></i></span>
+
+        <span class="datos"><input type="text" name="usuario" id="usuario" minlength="8" required placeholder="Nombre de usuario"><i
+                class="fas fa-check"></i></span>
+
+        <span class="datos"><input type="text" name="email" id="email" required placeholder="E-mail"><i
+                class="fas fa-check" pattern="\w+[-_]*\w+@\w+[-_]*\w+\.\w+"></i></span>
+
+        <span class="datos"><input type="password" name="pass" id="pass" required minlength="8"
+                placeholder="Contraseña (8 caract. o mas)"><i class="fas fa-check"></i></span>
+
+        <span class="datos"><input type="password" name="pass-confirm" id="pass-confirm" required
+                placeholder="Repetir contraseña"><i class="fas fa-check"></i></span>
+
+        <label class="label-destacada" for="nacimiento">Fecha de nacimiento</label>
+        <span class="datos"><input type="date" name="nacimiento" id="nacimiento" required
+                placeholder="Fecha de nacimiento"><i class="fas fa-check"></i></span>
+
+        <span class="datos"><input type="text" name="domicilio" id="domicilio" required
+                placeholder="Domicilio-tarjeta"><i class="fas fa-check"></i></span>
+       
+
+        <div id="register-radio-perfil">
+            <label class="label-destacada" for="tipo-perfil">Perfil del usuario</label>
+            <span><input type="radio" name="tipo-perfil" id="perfil-compra" value="compra"><label
+                    for="perfil-compra">Comprar</label>
+                <input type="radio" name="tipo-perfil" id="perfil-vende" value="vende"><label
+                    for="perfil-vende">Vender</label><br></span><br>
+
+        </div>
+
+        <div id="register-check-perfil">
+            <label class="label-destacada" for="intereses">Intereses</label>
+            <span><input type="checkbox" name="tipo-perfil01" id="ch-01" value="Electro" checked><label
+                    for="ch-01">Electro</label></span>
+            <span><input type="checkbox" name="tipo-perfil02" id="ch-02" value="Moda"><label
+                    for="ch-02">Moda</label></span>
+            <span><input type="checkbox" name="tipo-perfil03" id="ch-03" value="Hogar"><label
+                    for="ch-03">Hogar</label></span>
+            <span><input type="checkbox" name="tipo-perfil04" id="ch-04" value="Juguetes"><label
+                    for="ch-04">Juguetes</label></span>
+            <span><input type="checkbox" name="tipo-perfil05" id="ch-05" value="Vida sana"><label for="ch-05">Vida
+                    sana</label></span>
+
+        </div>
+        <label class="label-destacada" for="foto">Elija una foto</label>
+        <input type="file" name="foto" id="foto" required accept="image/jpg, image/png">
+        <span id="buttons">
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </span>
+
+    </form>
+</body>
+
+</html>

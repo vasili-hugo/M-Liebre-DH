@@ -1,0 +1,437 @@
+@import url("normalize.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    background-color: #ebebeb;
+}
+
+/* HEADER ------------------------------------------------------------------*/
+
+
+header {
+    background-color: #EAC926;
+    color: #03264C;
+    padding: 20px 20px 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #03264C;
+}
+
+.top_bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search i {
+    display: inline-block;
+    background-color: white;
+    color: #666;
+    border-radius: 0 5px 5px 0;
+    border-left: 1px solid rgb(196, 196, 196);
+    height: 2em;
+    width: 2em;
+    padding: 0.5em;
+}
+
+#buscar {
+    border: none;
+    height: 2em;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    padding: 0.5em;
+}
+
+
+.top_bar .search {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.top_bar .copy {
+    width: 100%;
+    text-align: center;
+}
+
+.search form {
+    width: 100%;
+}
+
+
+.hamburguer-button {
+    display: block;
+    height: 30px;
+    width: 30px;
+    background-color: #1259c3;
+    color: white !important;
+    border-radius: 8px;
+    border: 0px;
+    margin: 10px auto;
+    text-align: center;
+    /* position: relative; */
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+
+.top_bar span {
+    width: 46%;
+    display: inline-block;
+
+}
+
+
+.bottom_bar {
+    display: none;
+    color: #03264C;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul li {
+    margin: 5px;
+}
+
+.logo {
+    width: 150px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#banner {
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+#banner img {
+    width: 100.1%;
+
+    height: auto;
+}
+
+
+/* MAIN ------------------------------------------------------------------*/
+
+
+main {
+    width: 90%;
+    margin: auto;
+    display: block;
+}
+
+article {
+    margin: 10px 0;
+    background-color: #ffffff;
+    border-top: solid 1px #ebebeb;
+    transition: box-shadow 400ms;
+}
+
+section {
+    margin: 10px auto 10px auto;
+}
+
+.item {
+    width: 100%;
+    box-shadow: 0 0 0px rgb(100, 100, 100);
+}
+
+article:hover .producto{
+    display: block;
+}
+
+article:hover {
+    box-shadow: 0 0 10px rgb(100, 100, 100);
+}
+
+.over:hover {
+    background-color: #0022AA;
+    color:white;
+}
+
+.titles {
+    font-size: 24px;
+    margin: 30px auto 15px auto;
+    color: #666;
+}
+
+.imagen {
+    width: 100%;
+}
+
+
+
+.precio {
+    display: inline-block;
+    font-size: 18px;
+
+
+
+}
+
+.descuento {
+    display: inline-block;
+    font-size: 16px;
+    width: auto;
+    color: #39b54a;
+
+}
+
+.producto {
+    display: none;
+    color: #666;
+}
+
+.descripcion {
+    font-size: 16px;
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    position: relative;
+}
+
+
+
+.descripcion i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.descripcion span {
+    display: block;
+    width: 100%;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* FOOTER ------------------------------------------------------------------*/
+
+footer {
+    
+    width: 90%;
+    margin: auto;
+    color: #666;
+    text-align: center;
+}
+
+.foot {
+    display: flex;
+    flex-direction: column;
+}
+
+footer i {
+    font-size: 2em;
+    color: #1259c3;
+    margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES ------------------------------------------------------------------*/
+
+/* tablet */
+@media (min-width: 361px) {
+    header {
+        padding: 20px;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    .logo {
+        width: 150px;
+        margin-right: 20px;
+    }
+
+    .top_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top_bar .copy {
+        max-width: none;
+        text-align: right;
+    }
+
+    .bottom_bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .productos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    }
+
+    .item {
+        width: 44%;
+    }
+
+    .foot{
+        flex-direction: row;
+    }
+
+    
+    
+    
+
+    .hamburguer-button {
+        display: none;
+    }
+
+}
+
+
+
+/* desktop */
+@media (min-width: 769px) {
+    .item {
+        width: 22%;
+    }
+
+}
+
+/* FORMS--------------------------------------- */
+
+
+
+#register {
+    width: 50%;
+    margin: 10px auto;
+    max-width: 500px;
+    min-width: 360px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+
+}
+
+#register input {
+    display: inline-block;
+    height: 3em;
+    border: none;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+#register span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#register .datos input {
+    width: calc(100% - 25px);
+}
+
+div#register-radio-perfil {
+    margin: 20px 0 0 0 !important;
+}
+
+#register-radio-perfil span {
+    height: 1.5em;
+}
+
+#register-check-perfil {
+    margin: 10px 0 10px 0;
+}
+
+#register-check-perfil span {
+    height: 1.5em;
+}
+
+#register label {
+    display: inline;
+    margin: 10px 10px 0 5px;
+}
+
+#register .label-destacada {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#register button {
+    width: 48%;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #1259c3;
+
+    align-items: center;
+    align-self: center;
+
+}
+
+#login-button button {
+    width: 100%;
+    height: 2em;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: #1259c3;
+    margin-top: 25px;
+
+
+}
+
+
+
+
+
+
+
+
+/* Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a; */
